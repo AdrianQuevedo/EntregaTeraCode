@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mt-4">
+      <ul class="list-group">
+        
+        <li *ngFor="let reserve of reserveArray" (click)="verDatos= true; selectedReserve=reserve"
+          class="list-group-item list-group-item-action">
+          <span class="badge" style="margin-right: 5px">
+            {{reserve.id}}
+          </span>
+          <label>
+            {{reserve.nameReservation}}
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="verDatos" class="col-md-3 mt-4">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action">
+            <label>
+              Init: {{selectedReserve.init}}
+            </label>
+            <label>
+              Finish: {{selectedReserve.finish}}
+            </label>
+            <label>
+              Room: {{selectedReserve.room}}
+            </label>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="verDatos" class="col-md-3 mt-4">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action">Guests:</li>
+          <li *ngFor="let person of selectedReserve.invite" class="list-group-item list-group-item-action">
+          <label>
+            {{person}}
+          </label>
+        </li>
+        </ul>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+package dto;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Alumno extends Persona {
+
+	private List<Materia> materias = new ArrayList<>();
+	
+	public Alumno (String id, String nombre, String apellido, Date fecha, ArrayList<Materia> materias) {
+		super(id, nombre, apellido, fecha);
+		this.materias = materias;
+	}
+	
+	public Alumno (String id, String nombre, String apellido, Date fecha) {
+		super(id, nombre, apellido, fecha);
+	}
+
+	public List<Materia> getMaterias() {
+		return materias;
+	}
+
+	public void setMaterias(List<Materia> materias) {
+		this.materias = materias;
+	}
+	
+	public void addMateria(Materia materia) {
+		this.materias.add(materia);
+	}
+	
+	public void deleteMateria(int pos) {
+		if (pos < this.materias.size())
+		this.materias.remove(pos);
+	}
+}

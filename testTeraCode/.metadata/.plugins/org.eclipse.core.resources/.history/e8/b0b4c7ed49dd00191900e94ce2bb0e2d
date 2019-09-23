@@ -1,0 +1,45 @@
+package entity.rol;
+
+import java.util.Date;
+
+public class Person {
+	
+	private String name;
+	private String lastName;
+	private Date birthday;
+	private String id;
+	
+	public Person (String id, String nombre, String apellido, Date fecha){
+		this.id = id;
+		this.name = nombre;
+		this.lastName = apellido;
+		this.birthday = fecha;
+	}
+	
+	public String getNombre() {
+		return name;
+	}
+	public void setNombre(String nombre) {
+		this.name = nombre;
+	}
+	public String getApellido() {
+		return lastName;
+	}
+	public void setApellido(String apellido) {
+		this.lastName = apellido;
+	}
+	public Date getFechaNacimiento() {
+		return birthday;
+	}
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.birthday = fechaNacimiento;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	
+}

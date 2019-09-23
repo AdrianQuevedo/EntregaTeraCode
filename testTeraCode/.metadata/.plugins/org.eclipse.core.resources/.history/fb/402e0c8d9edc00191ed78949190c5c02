@@ -1,0 +1,13 @@
+package dto;
+
+import java.util.Date;
+
+public class Principal extends EmpleadoAbs {
+	
+	private double bonosPorCargo;
+	
+	public Principal(String id, String nombre, String apellido, Date fechaNacimiento, double salario, Date fechaInicioLaboral) {
+		super(id,nombre,apellido,fechaNacimiento,salario,fechaInicioLaboral);
+	}
+
+}

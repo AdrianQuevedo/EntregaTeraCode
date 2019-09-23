@@ -1,0 +1,16 @@
+package dto;
+
+import java.util.Date;
+
+public abstract class Empleado extends Persona {
+	
+	private double salario;
+	private Date inicioLaboral;
+	
+	private Empleado(String id, String nombre, String apellido, Date fecha, double salario, Date inicioLaboral) {
+		super(id, nombre, apellido, fecha);
+		this.salario = salario;
+		this.inicioLaboral = inicioLaboral;
+	}
+
+}

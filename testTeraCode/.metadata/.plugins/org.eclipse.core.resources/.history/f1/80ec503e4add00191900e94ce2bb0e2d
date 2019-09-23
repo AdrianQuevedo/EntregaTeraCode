@@ -1,0 +1,11 @@
+package entity.rol;
+
+import java.util.Date;
+
+public class Janitor extends EmployeeAbs {
+
+	protected Janitor(String id, String name, String lastName, Date date, double salary, Date inicioLaboral) {
+		super(id, name, lastName, date, salary, inicioLaboral);
+	}
+
+}

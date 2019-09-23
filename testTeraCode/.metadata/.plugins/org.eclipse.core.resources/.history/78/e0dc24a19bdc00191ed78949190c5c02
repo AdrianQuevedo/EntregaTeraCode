@@ -1,0 +1,11 @@
+package dto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Alumno extends Persona {
+
+	private List<Materia> materias = new ArrayList<>();
+	
+	
+}

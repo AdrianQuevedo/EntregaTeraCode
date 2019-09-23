@@ -1,0 +1,20 @@
+package calculadores;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import dto.Persona;
+
+public class FirstLetter extends CalculadorAbs {
+
+	@Override
+	public HashMap<String, Object> calcular(ArrayList<Persona> students) {
+
+		HashMap<String, Persona> studentsGroup = HashMap<>();
+		for(Persona student: students) {
+		}
+	}
+	
+	
+
+}

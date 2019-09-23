@@ -1,0 +1,37 @@
+package calculator;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import dto.Persona;
+import filter.IFilterAbs;
+
+public class SubjectCalculator extends CalculatorAbs {
+	
+	private IFilterAbs filter;
+		
+	public SubjectCalculator(IFilterAbs filter) {
+		super();
+		this.filter = filter;
+	}
+	
+	@Override
+	public HashMap<String, Object> calcular(ArrayList<Persona> students) {
+		HashMap<String, Object> studentsGroup = new HashMap<>();
+		for(Persona student: students) {
+			if(!studentsGroup.containsKey(student.getId())) {
+				String firstLetter = String.valueOf(student.getApellido().charAt(0));
+				if(studentsGroup.containsKey(firstLetter)) {
+					((ArrayList<Persona>) studentsGroup.get(firstLetter)).add(student);
+				}
+				else {
+					ArrayList<Persona> studentList = new ArrayList<>();
+					studentList.add(student);
+					studentsGroup.put(firstLetter, studentList);
+				}
+			}
+		}
+		return studentsGroup;
+	}
+
+}

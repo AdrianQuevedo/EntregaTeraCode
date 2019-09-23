@@ -1,0 +1,11 @@
+package dto;
+
+import java.util.Date;
+
+public class Conserje extends EmpleadoAbs {
+
+	protected Conserje(String id, String nombre, String apellido, Date fecha, double salario, Date inicioLaboral) {
+		super(id, nombre, apellido, fecha, salario, inicioLaboral);
+	}
+
+}

@@ -1,0 +1,12 @@
+package calculadores;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import dto.Persona;
+
+public abstract class CalculadorAbs {
+	
+	public abstract HashMap<String, Object> calcular(ArrayList<Persona> estudiantes);
+
+}

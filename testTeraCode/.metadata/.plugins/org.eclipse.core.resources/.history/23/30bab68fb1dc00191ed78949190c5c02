@@ -1,0 +1,24 @@
+package filter;
+
+import entity.Alumno;
+import entity.Persona;
+
+public class SubjectFilter implements IFilterAbs {
+	
+	private String nameSubject;
+	
+	public SubjectFilter(String nameSubject) {
+		super();
+		this.nameSubject = nameSubject;
+	}
+
+	@Override
+	public boolean isValid(Persona person) {
+		for(String subject:((Alumno)person).getMaterias()) {
+			if(subject.equals(nameSubject))
+				return true;
+		}
+		return false;
+	}
+
+}

@@ -1,0 +1,32 @@
+package entity;
+
+import java.util.Date;
+
+public abstract class EmpleadoAbs extends Persona {
+	
+	private double salario;
+	private Date inicioLaboral;
+	
+	protected EmpleadoAbs(String id, String nombre, String apellido, Date fecha, double salario, Date inicioLaboral) {
+		super(id, nombre, apellido, fecha);
+		this.setSalario(salario);
+		this.setInicioLaboral(inicioLaboral);
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
+	public Date getInicioLaboral() {
+		return inicioLaboral;
+	}
+
+	public void setInicioLaboral(Date inicioLaboral) {
+		this.inicioLaboral = inicioLaboral;
+	}
+
+}

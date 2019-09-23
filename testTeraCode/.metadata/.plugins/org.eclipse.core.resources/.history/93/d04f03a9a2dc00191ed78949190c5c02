@@ -1,0 +1,11 @@
+package calculadores;
+
+import java.util.ArrayList;
+
+import dto.Persona;
+
+public abstract class CalculadorAbs {
+	
+	public abstract ArrayList<Persona> calcular(ArrayList<Persona> estudiantes)
+
+}

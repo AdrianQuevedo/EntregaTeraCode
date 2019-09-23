@@ -1,0 +1,9 @@
+package filter;
+
+import dto.Persona;
+
+public interface FilterAbs {
+	
+	public boolean isValid(Persona person);
+
+}

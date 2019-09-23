@@ -1,0 +1,13 @@
+package filter;
+
+import dto.Persona;
+
+public class SubjectFilter implements FilterAbs {
+
+	@Override
+	public boolean isValid(Persona person) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
