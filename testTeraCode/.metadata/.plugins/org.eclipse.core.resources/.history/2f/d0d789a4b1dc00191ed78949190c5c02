@@ -1,9 +1,0 @@
-package filter;
-
-import entity.Persona;
-
-public interface IFilterAbs {
-	
-	public boolean isValid(Persona person);
-
-}

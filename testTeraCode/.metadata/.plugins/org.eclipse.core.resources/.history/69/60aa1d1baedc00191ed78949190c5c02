@@ -1,9 +1,0 @@
-package filter;
-
-import dto.Persona;
-
-public abstract class FilterAbs {
-	
-	public abstract boolean isValid(Persona person);
-
-}
